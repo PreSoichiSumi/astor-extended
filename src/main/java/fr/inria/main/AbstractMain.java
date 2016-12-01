@@ -223,6 +223,11 @@ public abstract class AbstractMain {
 			return false;
 		}
 
+		if(cmd.hasOption("distThreshold")){
+			ConfigurationProperties.properties.setProperty("distThreshold",
+					cmd.getOptionValue("distThreshold"));
+		}
+
 		if (cmd.hasOption("jvm4testexecution")) {
 			ConfigurationProperties.properties.setProperty("jvm4testexecution",
 					cmd.getOptionValue("jvm4testexecution"));
